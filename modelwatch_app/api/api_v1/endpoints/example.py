@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from example_app.core.models.output import OutputExample
-from example_app.core.models.input import InputExample
+from modelwatch_app.core.models.output import OutputExample
+from modelwatch_app.core.models.input import InputExample
 
 router = APIRouter()
 

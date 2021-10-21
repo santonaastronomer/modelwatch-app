@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Astronomer MLOps & Governance Tool{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block page_content %}
+{% include 'include/sidebar.html' %}
+<!-- <h1>
+    Astronomer MLOps & Governance Tool
+</h1> -->
+
+<center>
+<p> This is the home page. Good place to show the predict endpoint. </p>
+
+{{data.page}}
+</center>
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}

@@ -1,6 +1,6 @@
 from starlette.testclient import TestClient
-from example_app.main import app
-from example_app.core.config import API_V1_STR
+from modelwatch_app.main import app
+from modelwatch_app.core.config import API_V1_STR
 import json
 
 client = TestClient(app)

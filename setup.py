@@ -6,12 +6,12 @@ with open("requirements.txt", "r") as f:
 
 
 setup(
-    name="example_app",
+    name="modelwatch_app",
     version="0.1.0",
-    description="example api to be deployed to aws lambda",
-    url="http://github.com/iwpnd/fastapi-aws-lambda-example",
-    author="probably you",
-    author_email="probably@you.pw",
+    description="web app to be deployed to aws lambda",
+    url="http://github.com/santonaastronomer/modelwatch",
+    author="Santona Tuli",
+    author_email="santona@astronomer.io",
     license="MIT",
     include_package_data=True,
     install_requires=requirements,

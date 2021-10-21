@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Data Layout{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block page_content %}
+<!-- <h1 class="cap">ML Performance</h1> -->
+
+{% include 'include/feature_viz.html' %} 
+<!-- data_text.html -->
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}

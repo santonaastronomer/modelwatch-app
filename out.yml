@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Modelwatch web app deployed using fastAPI and aws lambda
+
+  '
+Resources:
+  FastapiLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Events:
+        ApiEvent:
+          Properties:
+            RestApiId:
+              Ref: FastapiGateway
+            Path: /{proxy+}
+            Method: ANY
+          Type: Api
+      FunctionName: fastapi-lambda
+      CodeUri: s3://travis-web-deployment-bucket/bd79adeecab883e169afff8e7416fb97
+      Handler: modelwatch_app.main.handler
+      Runtime: python3.7
+      Timeout: 300
+      MemorySize: 128
+      Description: Modelwatch web app deployed using fastAPI and aws lambda
+      Role: arn:aws:iam::936535839574:role/fastapilambdarole
+  FastapiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      OpenApiVersion: 3.0.0
